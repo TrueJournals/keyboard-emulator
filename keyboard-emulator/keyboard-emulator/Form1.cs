@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using WindowsInput;
 
 namespace keyboard_emulator
 {
@@ -14,6 +16,12 @@ namespace keyboard_emulator
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(1000);
+            InputSimulator.SimulateKeyPress(VirtualKeyCode.VK_A);
         }
     }
 }
